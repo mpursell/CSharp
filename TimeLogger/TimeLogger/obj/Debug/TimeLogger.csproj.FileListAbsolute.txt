@@ -1,0 +1,14 @@
+c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\bin\Debug\TimeLogger.exe.config
+c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\bin\Debug\TimeLogger.exe
+c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\bin\Debug\TimeLogger.pdb
+c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\obj\Debug\TimeLogger.csprojResolveAssemblyReference.cache
+c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\obj\Debug\MainWindow.g.cs
+c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\obj\Debug\App.g.cs
+c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\obj\Debug\TimeLogger_MarkupCompile.cache
+c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\obj\Debug\TimeLogger_MarkupCompile.lref
+c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\obj\Debug\MainWindow.baml
+c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\obj\Debug\TimeLogger.g.resources
+c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\obj\Debug\TimeLogger.Properties.Resources.resources
+c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\obj\Debug\TimeLogger.csproj.GenerateResource.Cache
+c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\obj\Debug\TimeLogger.exe
+c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\obj\Debug\TimeLogger.pdb
