@@ -4,18 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TimeLogger"
-        mc:Ignorable="d"
-        Title="Time Logger" Height="350" Width="525">
-    <Grid>
-        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="27,86,0,0" Click="StartTimer" Height="33"/>
-        <Button x:Name="StopButton" Content="Stop" HorizontalAlignment="Left" Margin="27,124,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.187,-0.55" Click="StopTimer" Height="33"/>
-        <TextBox x:Name="StartTimeText" HorizontalAlignment="Left" Height="33" Margin="107,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75"/>
-        <TextBox x:Name="StopTimeText" HorizontalAlignment="Left" Height="33" Margin="107,127,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextChanged="StopTimeText_TextChanged"/>
-        <TextBox x:Name="ElapsedTimeText" HorizontalAlignment="Left" Height="36" Margin="343,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="76"/>
-        <TextBox x:Name="ProjectCodeText" HorizontalAlignment="Left" Height="23" Margin="27,20,0,0" TextWrapping="Wrap" Text="Project Code" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="DayOfWeekText" HorizontalAlignment="Left" Height="36" Margin="263,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.444,3.099" TextChanged="DayOfWeekText_TextChanged"/>
-        <Label x:Name="TimeLogText" Content="          Time Log" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="263,86,0,0" Width="156" FontSize="14" Height="33"/>
-        <TextBox x:Name="TaskNameText" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Task Name" VerticalAlignment="Top" Width="156" Margin="263,20,0,0"/>
+        mc:Ignorable="d" Height="350" Width="525" WindowStyle="ToolWindow">
+    <Grid Margin="0,0,-39,-53">
+        <Grid Margin="34,62,91,117">
+            <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,66,0,0" Click="StartTimer" Height="33"/>
+            <Button x:Name="StopButton" Content="Stop" HorizontalAlignment="Left" Margin="0,104,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.187,-0.55" Click="StopTimer" Height="33"/>
+            <TextBox x:Name="StartTimeText" HorizontalAlignment="Left" Height="33" Margin="80,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75"/>
+            <TextBox x:Name="StopTimeText" HorizontalAlignment="Left" Height="33" Margin="80,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextChanged="StopTimeText_TextChanged"/>
+            <TextBox x:Name="ElapsedTimeText" HorizontalAlignment="Left" Height="36" Margin="316,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="76"/>
+            <TextBox x:Name="ProjectCodeText" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Project Code" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="DayOfWeekText" HorizontalAlignment="Left" Height="36" Margin="236,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.444,3.099" TextChanged="DayOfWeekText_TextChanged"/>
+            <Label x:Name="TimeLogText" Content="          Time Log" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="236,66,0,0" Width="156" FontSize="14" Height="33"/>
+            <TextBox x:Name="TaskNameText" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Task Name" VerticalAlignment="Top" Width="156" Margin="236,0,0,0"/>
+
+        </Grid>
+        <Grid Margin="34,62,91,117">
+            <Label x:Name="TimeLogText1" Content="          Time Log" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="236,66,0,0" Width="156" FontSize="14" Height="33"/>
+            <Button x:Name="ClearButton" Content="Reset" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Click="ClearAll" Margin="236,149,0,0" Height="33"/>
+
+        </Grid>
+        <Label x:Name="TitleLabel" Content="Time Logger" HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top" Width="392" FontSize="18" FontWeight="Bold"/>
 
     </Grid>
 </Window>

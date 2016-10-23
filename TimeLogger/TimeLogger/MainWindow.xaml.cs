@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace TimeLogger
 {
@@ -22,6 +23,9 @@ namespace TimeLogger
     {
 
         public static DateTime StartTime;
+        public static String WeekDay;
+        public String LogPath = "C:\\Users\\" + Environment.UserName + "\\Documents\\TimeLog.csv";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,6 +33,7 @@ namespace TimeLogger
 
         private void StartTimer(object sender, RoutedEventArgs e)
         {
+
             // clear all our text boxes except Project Code on timer start
             StartTimeText.Clear();
             StopTimeText.Clear();
@@ -36,22 +41,23 @@ namespace TimeLogger
             ElapsedTimeText.Clear();
 
             // get the starting time as DateTime object
-           DateTime  StartingTime = GetStartTime();
+            DateTime StartingTime = GetStartTime();
 
             // write out a bunch of strings to the various text boxes
             StartTimeText.AppendText(StartingTime.ToString("HH: mm:ss"));
-            String WeekDay = StartingTime.DayOfWeek.ToString();
+            WeekDay = StartingTime.DayOfWeek.ToString();
             DayOfWeekText.AppendText(WeekDay);
+
         }
 
-    
+
 
         public DateTime GetStartTime()
         {
             // get a start time as a DateTime object
             StartTime = DateTime.Now;
             return StartTime;
-            
+
         }
 
 
@@ -60,7 +66,7 @@ namespace TimeLogger
 
 
             GetStopTime(StartTime);
-            
+
 
         }
 
@@ -77,9 +83,68 @@ namespace TimeLogger
             String ExpiredMinutes = ExpiredTime.Minutes.ToString();
             String ExpiredSeconds = ExpiredTime.Seconds.ToString();
 
-            String Result = ExpiredHours + ":" + ExpiredMinutes + ":" + ExpiredSeconds;
+            String PCode = ProjectCodeText.Text;
+            String TaskName = TaskNameText.Text;
+
+            String Result = ExpiredHours + ":" + ExpiredMinutes;
+            String LogResult = WeekDay + "," + TaskName + "," + PCode + "," + ExpiredHours + ":" + ExpiredMinutes;
             ElapsedTimeText.AppendText(Result);
+
+            
+
+            Logger(LogResult);
         }
+
+        private void Logger(String Text)
+        {
+
+            // TODO - Check if today is Monday, and last write time on log file 
+            // was Friday.  If it was, delete it so we can start again.  If not,
+            // carry on appending the text
+
+            // check the csv exists
+
+            
+
+            if (!File.Exists(LogPath))
+            {
+                try
+                {
+                    // TODO: Not working as expected, doesn't log until after second stop is initiated.
+
+                    File.Create(LogPath);
+                    File.AppendAllText(LogPath, "Day,TaskName,Code,Time" + Environment.NewLine);
+                    File.AppendAllText(LogPath, Text + Environment.NewLine);
+                    
+                }
+                catch (Exception e)
+                {
+                    String CaughtException = e.Message.ToString();
+                    
+                    // TODO: Throw the error to console or window output.
+                    // decide what options to give user
+                }
+
+
+            }
+            else if (File.Exists(LogPath))
+            {
+                File.AppendAllText(LogPath, Text + Environment.NewLine);
+            }
+
+
+        }
+
+
+        private void ClearAll(object sender, RoutedEventArgs e)
+        {
+            StartTimeText.Clear();
+            StopTimeText.Clear();
+            DayOfWeekText.Clear();
+            ElapsedTimeText.Clear();
+        }
+
+
 
         private void DayOfWeekText_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -90,7 +155,12 @@ namespace TimeLogger
         {
 
         }
-    }
 
+       
+
+       
+
+        
+    }
 
 }
