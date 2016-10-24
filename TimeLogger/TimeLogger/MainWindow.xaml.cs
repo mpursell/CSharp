@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 
+
 namespace TimeLogger
 {
     /// <summary>
@@ -91,13 +92,23 @@ namespace TimeLogger
             TimeSpan ExpiredTime = (FinishTime - StartTime);
             String ExpiredHours = ExpiredTime.Hours.ToString();
             String ExpiredMinutes = ExpiredTime.Minutes.ToString();
+
+            // convert the minutes to int so we can turn them into 
+            // decimal fractions of hours
+            double Minutes = int.Parse(ExpiredMinutes);
+            double MinutesAsDecimal = Minutes / 60 * 10;
+            MinutesAsDecimal = Math.Round(MinutesAsDecimal, 2);
+            String MinutesAsString = MinutesAsDecimal.ToString(); 
+            
+
+
             String ExpiredSeconds = ExpiredTime.Seconds.ToString();
 
             String PCode = ProjectCodeText.Text;
             String TaskName = TaskNameText.Text;
 
             String Result = ExpiredHours + ":" + ExpiredMinutes;
-            String LogResult = WeekDay + "," + TaskName + "," + PCode + "," + ExpiredHours + ":" + ExpiredMinutes;
+            String LogResult = WeekDay + "," + TaskName + "," + PCode + "," + ExpiredHours + "." + MinutesAsString;
             ElapsedTimeText.AppendText(Result);
 
             
@@ -123,7 +134,7 @@ namespace TimeLogger
                 catch (Exception e)
                 {
                     String CaughtException = e.Message.ToString();
-                    return ;
+                    
 
                     // TODO: Throw the error to console or window output.
                     // decide what options to give user
@@ -131,7 +142,6 @@ namespace TimeLogger
 
 
                 File.WriteAllText(LogPath, CsvHeaders + Environment.NewLine);
-
 
 
             }
@@ -145,12 +155,8 @@ namespace TimeLogger
             // carry on appending the text
 
 
-
             File.AppendAllText(LogPath, Text + Environment.NewLine);
             
-            
-
-
         }
 
 
@@ -162,24 +168,21 @@ namespace TimeLogger
             ElapsedTimeText.Clear();
         }
 
+      
+    }
 
-
-        private void DayOfWeekText_TextChanged(object sender, TextChangedEventArgs e)
+    // TODO: simplify the logger into a single class with Create and Write Methods
+    public class Logger
+    {
+        public void CreateLog(String LogPath)
         {
 
         }
 
-        private void StopTimeText_TextChanged(object sender, TextChangedEventArgs e)
+        public void WriteLog(String LogPath)
         {
 
         }
-
-        private void ProjectCodeText_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-
     }
 
 }
