@@ -97,7 +97,7 @@ namespace TimeLogger
             // decimal fractions of hours
             double Minutes = int.Parse(ExpiredMinutes);
             double MinutesAsDecimal = Minutes / 60 * 10;
-            MinutesAsDecimal = Math.Round(MinutesAsDecimal, 2);
+            MinutesAsDecimal = Math.Round(MinutesAsDecimal, 0);
             String MinutesAsString = MinutesAsDecimal.ToString(); 
             
 
