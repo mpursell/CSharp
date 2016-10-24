@@ -25,6 +25,7 @@ namespace TimeLogger
         public static DateTime StartTime;
         public static String WeekDay;
         public String LogPath = "C:\\Users\\" + Environment.UserName + "\\Documents\\TimeLog.csv";
+        public const String CsvHeaders = "Day,TaskName,ProjectCode,Time";
 
         public MainWindow()
         {
@@ -48,6 +49,15 @@ namespace TimeLogger
             WeekDay = StartingTime.DayOfWeek.ToString();
             DayOfWeekText.AppendText(WeekDay);
 
+            if (!File.Exists(LogPath))
+            {
+                // create the log file
+                CreateLog(LogPath);
+
+            }
+
+            
+    
         }
 
 
@@ -95,6 +105,38 @@ namespace TimeLogger
             Logger(LogResult);
         }
 
+        private void CreateLog(String LogPath)
+        {
+            // Create the log file if it doesn't already exist
+
+            if (!File.Exists(LogPath))
+            {
+                try
+                {
+
+                    // make sure to close the file after creation so we can immediately
+                    // append the csv headers to it
+                    File.Create(LogPath).Close();
+
+
+                }
+                catch (Exception e)
+                {
+                    String CaughtException = e.Message.ToString();
+                    return ;
+
+                    // TODO: Throw the error to console or window output.
+                    // decide what options to give user
+                }
+
+
+                File.WriteAllText(LogPath, CsvHeaders + Environment.NewLine);
+
+
+
+            }
+        }
+
         private void Logger(String Text)
         {
 
@@ -102,35 +144,11 @@ namespace TimeLogger
             // was Friday.  If it was, delete it so we can start again.  If not,
             // carry on appending the text
 
-            // check the csv exists
 
+
+            File.AppendAllText(LogPath, Text + Environment.NewLine);
             
-
-            if (!File.Exists(LogPath))
-            {
-                try
-                {
-                    // TODO: Not working as expected, doesn't log until after second stop is initiated.
-
-                    File.Create(LogPath);
-                    File.AppendAllText(LogPath, "Day,TaskName,Code,Time" + Environment.NewLine);
-                    File.AppendAllText(LogPath, Text + Environment.NewLine);
-                    
-                }
-                catch (Exception e)
-                {
-                    String CaughtException = e.Message.ToString();
-                    
-                    // TODO: Throw the error to console or window output.
-                    // decide what options to give user
-                }
-
-
-            }
-            else if (File.Exists(LogPath))
-            {
-                File.AppendAllText(LogPath, Text + Environment.NewLine);
-            }
+            
 
 
         }
@@ -156,11 +174,12 @@ namespace TimeLogger
 
         }
 
-       
+        private void ProjectCodeText_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
-       
+        }
 
-        
+
     }
 
 }

@@ -12,3 +12,17 @@ c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\obj\De
 c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\obj\Debug\TimeLogger.csproj.GenerateResource.Cache
 c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\obj\Debug\TimeLogger.exe
 c:\users\mike\documents\visual studio 2015\Projects\TimeLogger\TimeLogger\obj\Debug\TimeLogger.pdb
+C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\bin\Debug\TimeLogger.exe.config
+C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger.exe
+C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger.pdb
+C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\bin\Debug\TimeLogger.exe
+C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\bin\Debug\TimeLogger.pdb
+C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger.csprojResolveAssemblyReference.cache
+C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\MainWindow.g.cs
+C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\App.g.cs
+C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger_MarkupCompile.cache
+C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger_MarkupCompile.lref
+C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\MainWindow.baml
+C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger.g.resources
+C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger.Properties.Resources.resources
+C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger.csproj.GenerateResource.Cache
