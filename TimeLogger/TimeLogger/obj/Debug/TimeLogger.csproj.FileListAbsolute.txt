@@ -26,3 +26,17 @@ C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\MainWindow.ba
 C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger.g.resources
 C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger.Properties.Resources.resources
 C:\Users\mike\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger.csproj.GenerateResource.Cache
+C:\Users\sa_pursellm\Documents\git\CSharp\TimeLogger\TimeLogger\bin\Debug\TimeLogger.exe.config
+C:\Users\sa_pursellm\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger.exe
+C:\Users\sa_pursellm\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger.pdb
+C:\Users\sa_pursellm\Documents\git\CSharp\TimeLogger\TimeLogger\bin\Debug\TimeLogger.exe
+C:\Users\sa_pursellm\Documents\git\CSharp\TimeLogger\TimeLogger\bin\Debug\TimeLogger.pdb
+C:\Users\sa_pursellm\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger.csprojResolveAssemblyReference.cache
+C:\Users\sa_pursellm\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\MainWindow.g.cs
+C:\Users\sa_pursellm\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\App.g.cs
+C:\Users\sa_pursellm\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger_MarkupCompile.cache
+C:\Users\sa_pursellm\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger_MarkupCompile.lref
+C:\Users\sa_pursellm\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\MainWindow.baml
+C:\Users\sa_pursellm\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger.g.resources
+C:\Users\sa_pursellm\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger.Properties.Resources.resources
+C:\Users\sa_pursellm\Documents\git\CSharp\TimeLogger\TimeLogger\obj\Debug\TimeLogger.csproj.GenerateResource.Cache

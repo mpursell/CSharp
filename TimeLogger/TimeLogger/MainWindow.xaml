@@ -18,7 +18,6 @@
             <TextBox x:Name="StartTimeText" HorizontalAlignment="Left" Height="33" Margin="80,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" IsReadOnly="True" TextAlignment="Center" Padding="6"/>
             <TextBox x:Name="StopTimeText" HorizontalAlignment="Left" Height="33" Margin="80,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" IsReadOnly="True" TextAlignment="Center" Padding="6"/>
             <TextBox x:Name="ElapsedTimeText" HorizontalAlignment="Left" Height="36" Margin="316,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="76" IsReadOnly="True" TextAlignment="Center" Padding="6"/>
-            <TextBox x:Name="ProjectCodeText" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="0,33,0,0"/>
             <TextBox x:Name="TaskNameText" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Margin="236,33,0,0"/>
             <TextBox x:Name="DayOfWeekText" HorizontalAlignment="Left" Height="36" Margin="236,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.444,3.099" IsReadOnly="True" TextAlignment="Center" Padding="6"/>
             <Label x:Name="TimeLogText" Content="          Time Log" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="236,66,0,0" Width="156" FontSize="14" Height="33" FontWeight="Bold" Padding="6"/>
@@ -33,6 +32,7 @@
 
         </Grid>
         <Label x:Name="TitleLabel" Content="Time Logger" HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top" Width="392" FontSize="18" FontWeight="Bold"/>
+        <ComboBox x:Name="ProjectCodesCombo" HorizontalAlignment="Left" Margin="34,93,0,0" VerticalAlignment="Top" Width="120" Initialized="ProjectCodesCombo_Initialized" />
 
     </Grid>
 </Window>

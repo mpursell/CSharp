@@ -33,6 +33,21 @@ namespace TimeLogger
             InitializeComponent();
         }
 
+
+        private List<String> GetProjectCodes()
+
+            // method to read in the project codes from a given text file
+        {
+            List <String> PCodeList = new List<String>();
+            String PCodesFilePath = "C:\\Users\\" + Environment.UserName + "\\Documents\\ProjectCodes.txt";
+
+            foreach(String Line in File.ReadLines(PCodesFilePath))
+            {
+                PCodeList.Add(Line);
+            }
+            return PCodeList;
+        }
+
         private void StartTimer(object sender, RoutedEventArgs e)
         {
 
@@ -104,7 +119,8 @@ namespace TimeLogger
 
             String ExpiredSeconds = ExpiredTime.Seconds.ToString();
 
-            String PCode = ProjectCodeText.Text;
+           // String PCode = ProjectCodeText.Text;
+            String PCode = ProjectCodesCombo.SelectedItem.ToString();
             String TaskName = TaskNameText.Text;
 
             String Result = ExpiredHours + ":" + ExpiredMinutes;
@@ -168,7 +184,15 @@ namespace TimeLogger
             ElapsedTimeText.Clear();
         }
 
-      
+        private void ProjectCodesCombo_Initialized(object sender, EventArgs e)
+
+            // when combo box is initialized, read in the list items from GetProjectCodes()
+        {
+            foreach(String PCode in GetProjectCodes())
+            {
+                ProjectCodesCombo.Items.Add(PCode);
+            }
+        }
     }
 
     // TODO: simplify the logger into a single class with Create and Write Methods
